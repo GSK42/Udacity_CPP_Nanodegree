@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "🧹 Clean Files",
+            "type": "shell",
+            "command": "Get-ChildItem -Include *.o, *.exe -Recurse -Force -ErrorAction SilentlyContinue | Remove-Item -Force -ErrorAction SilentlyContinue; Write-Host 'Success: Every single .o and .exe file removed!' -ForegroundColor Green",
+            "options": {
+                "statusbar": {
+                    "label": "$(trash) Clean Files",
+                    "color": "#ff5555"
+                }
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "🚀 Build & Run Active C++ File",
+            "type": "shell",
+            "command": "g++ -g '${file}' -o '${fileDirname}\\${fileBasenameNoExtension}.exe'; if ($?) { Write-Host 'Running executable...' -ForegroundColor Cyan; & '${fileDirname}\\${fileBasenameNoExtension}.exe' }",
+            "options": {
+                "statusbar": {
+                    "label": "$(play) Build & Run",
+                    "color": "#a3e635"
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "focus": true,
+                "clear": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
