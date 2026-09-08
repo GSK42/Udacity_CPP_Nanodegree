@@ -9,9 +9,14 @@ int main()
 
     std::string timestamp , severity , message ;
     std::getline (ss, timestamp, ']');
+    //Removes "[" from th first element
     timestamp.erase(0,1);
+
+    //Ignores space
     ss.ignore(1);
     std::getline (ss, severity, ':');
+
+    //Ignores space
     ss.ignore(1);
     std::getline (ss, message);
 
