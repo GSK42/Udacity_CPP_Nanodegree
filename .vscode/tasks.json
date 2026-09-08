@@ -8,7 +8,7 @@
             "options": {
                 "statusbar": {
                     "label": "$(trash) Clean Files",
-                    "color": "#ff5555"
+                    "color": "#ea6426"
                 }
             },
             "presentation": {
