@@ -1,0 +1,4 @@
+Header Organization
+Header files are another key step in keeping code organized. They contain declarations — the names and types of functions, variables, and classes — but not the actual implementations. By including headers in multiple source files, you can reuse code safely without breaking the C++ compilation model. To avoid processing the same header multiple times, you use include guards like #ifndef, #define, and #endif. This way, the compiler only includes the file once, no matter how many times it is referenced. Proper header organization separates interface from implementation, improves modularity, and makes large projects easier to maintain.
+
+You probably want to use that in your main file. If you just include the.cpp file, it might work, but it's bad practice. This is because it breaks the C++ compilation model where each.cpp file is compiled independently into an object file and linked together by the linker.

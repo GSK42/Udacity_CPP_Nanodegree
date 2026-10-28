@@ -1,0 +1,1 @@
+Type casting : Static cast, is a compile time case
