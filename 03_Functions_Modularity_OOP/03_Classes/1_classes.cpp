@@ -44,12 +44,11 @@ class Book
 };
 int main()
 {
-    Book book1;
+    Book book1, book2;
     book1.set_author("Rio");
     book1.set_title("I Robot");
     book1.set_page_count(20);
 
-    Book book2;
     book2.set_author("Gary");
     book2.set_title("I God");
     book2.set_page_count(25);
