@@ -66,7 +66,7 @@ int main(){
     }
     std::cout << std::endl;
 
-    //Mine
+    //Mine, range iterator
     for (int x : num_array)
     {
         std::cout << x << " " << std::endl;//Mine
