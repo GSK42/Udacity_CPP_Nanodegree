@@ -27,7 +27,7 @@ class Book
         }
         void set_page_count(int p)
         {
-            page_count = p;
+            page_count = (p >= 0) ? p : 0;
         }
         std::string get_title()
         {
@@ -51,7 +51,7 @@ int main()
 
     book2.set_author("Gary");
     book2.set_title("I God");
-    book2.set_page_count(25);
+    book2.set_page_count(-25);
 
     std::cout << "Book 1 author is : " << book1.get_author() <<std::endl;
     std::cout << "Book 1 title is : " << book1.get_title() <<std::endl;
