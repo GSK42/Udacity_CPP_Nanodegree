@@ -46,7 +46,7 @@ class CompareByDistance
 
 
 /* This program puts four city indices into a priority queue, then pulls them out one at a time in order of smallest distance. 
-   It uses the City struct, the cities vector and the CompareByDistance functor from your earlier snippets.
+   It uses the City struct, the cities vector and the CompareByDistance functor from earlier snippets.
 */
 int main()
 {
